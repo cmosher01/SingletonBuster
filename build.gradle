@@ -2,6 +2,12 @@ plugins {
     id 'application'
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of 17
+    }
+}
+
 application {
-    mainClassName = 'test.SingletonBuster'
+    mainClass.set 'test.SingletonBuster'
 }
